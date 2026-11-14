@@ -1,0 +1,81 @@
+.todo-app {
+  width: min(100%, 1080px);
+  margin: 48px auto;
+  padding: 28px 28px 32px;
+  border-radius: 32px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.todo-header {
+  margin-bottom: 26px;
+}
+
+.header-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.top-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(99, 102, 241, 0.18);
+  color: #c7d2fe;
+  border: 1px solid rgba(165, 180, 252, 0.35);
+}
+
+.top-badge.muted {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.todo-title {
+  margin: 0;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.08em;
+  color: var(--text-100);
+}
+
+.todo-subtitle {
+  margin-top: 12px;
+  font-size: 1.06rem;
+  color: var(--text-300);
+}
+
+.todo-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(290px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.todo-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@media (max-width: 760px) {
+  .todo-app {
+    margin: 20px 14px;
+    padding: 20px 16px;
+    border-radius: 22px;
+  }
+
+  .todo-body {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,3 +1,7 @@
+import '../styles/todo-app.css';
+import '../styles/todo-form.css';
+import '../styles/todo-list.css';
+import '../styles/todo-sidebar.css';
 import { useTodos } from '../hooks/useTodos';
 import { TodoFilters } from './TodoFilters';
 import { TodoHeader } from './TodoHeader';

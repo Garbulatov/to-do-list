@@ -1,0 +1,75 @@
+.todo-stats,
+.todo-filters {
+  background: rgba(15, 23, 42, 0.62);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 22px;
+  padding: 18px 16px;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.14);
+}
+
+.todo-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-300);
+  font-weight: 600;
+}
+
+.stats-label {
+  color: var(--text-400);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stats-item strong {
+  color: var(--text-100);
+  font-size: 1.3rem;
+}
+
+.todo-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filters-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-400);
+  font-weight: 800;
+}
+
+.filters-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: rgba(15, 23, 42, 0.82);
+  color: var(--text-200);
+  padding: 10px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.18) 0%, rgba(168, 85, 247, 0.18) 100%);
+  color: #e0e7ff;
+  border-color: rgba(129, 140, 248, 0.35);
+  box-shadow: 0 12px 20px rgba(79, 70, 229, 0.12);
+}
+
+.clear-completed-btn {
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.28) 0%, rgba(69, 10, 10, 0.28) 100%);
+  color: #fecaca;
+  border: 1px solid rgba(248, 113, 113, 0.18);
+}

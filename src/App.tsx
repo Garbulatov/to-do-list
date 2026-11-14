@@ -1,12 +1,9 @@
-import './App.css'
+import './styles/theme.css';
+import { TodoApp } from './components/TodoApp';
 
 function App() {
-
-  return (
-    <>
-      
-    </>
-  )
+  return <TodoApp />;
 }
 
-export default App
+export default App;
+
