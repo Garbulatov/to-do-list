@@ -1,32 +1,83 @@
-# React + TypeScript + Vite
+# ✅ To-Do List (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Современное веб-приложение для управления задачами, написанное на **React** и **TypeScript**. Строгая типизация обеспечивает надежность кода, а модульная архитектура делает приложение быстрым и удобным в поддержке.
 
-Currently, two official plugins are available:
+![React](https://shields.io)
+![TypeScript](https://shields.io)
+![Vite](https://shields.io)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Скриншот приложения](https://placeholder.com)
 
-## React Compiler
+## ✨ Основные возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **CRUD-операции с задачами:** добавление, редактирование текста и удаление задач.
+* **Управление статусом:** переключение состояния задачи (выполнена / активна) и массовая очистка выполненных дел.
+* **Фильтрация списка:** мгновенное переключение между вкладками *Все*, *Активные* и *Завершенные*.
+* **Счетчик задач:** отображение количества оставшихся невыполненных дел в реальном времени.
+* **Локальное сохранение:** автоматическая синхронизация списка с `localStorage` браузера через кастомный хук.
+* **Типобезопасность:** полная типизация пропсов, состояний и моделей данных с помощью TypeScript.
 
-## Expanding the Oxlint configuration
+## 🛠 Стек технологий
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+* **Библиотека UI:** React
+* **Язык:** TypeScript
+* **Сборщик:** Vite *(или Create React App — замените при необходимости)*
+* **Стилизация:** CSS Modules / Tailwind CSS / Styled Components *(оставьте нужное)*
+* **Хранение данных:** Web Storage API (`localStorage`)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## 🚀 Установка и запуск
+
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone https://github.com[ваш-логин]/[название-репозитория].git
+   ```
+
+2. **Перейдите в директорию проекта:**
+   ```bash
+   cd [название-репозитория]
+   ```
+
+3. **Установите зависимости:**
+   ```bash
+   npm install
+   ```
+
+4. **Запустите сервер для разработки:**
+   ```bash
+   npm run dev
+   ```
+   Приложение откроется по адресу `http://localhost:5173`.
+
+5. **Сборка для продакшена:**
+   ```bash
+   npm run build
+   ```
+
+## 📁 Структура проекта
+
+```text
+src/
+├── components/          # UI-компоненты
+│   ├── TodoForm.tsx     # Форма добавления новой задачи
+│   ├── TodoItem.tsx     # Карточка отдельной задачи
+│   ├── TodoList.tsx     # Список задач
+│   └── TodoFilter.tsx   # Панель фильтрации и счетчик
+├── hooks/               # Кастомные React-хуки (например, useLocalStorage)
+├── types/               # TypeScript интерфейсы и типы
+│   └── todo.ts          # Типизация модели задачи (ITodo)
+├── App.tsx              # Корневой компонент и логика состояния
+├── main.tsx             # Точка входа в приложение
+└── index.css            # Глобальные стили
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🔮 Планы по развитию
+
+* [ ] Добавить перетаскивание задач (Drag-and-Drop) с помощью `dnd-kit`.
+* [ ] Реализовать переключатель светлой и темной темы.
+* [ ] Добавить дедлайны и цветовые метки приоритета.
+* [ ] Покрыть ключевые компоненты unit-тестами (Vitest + React Testing Library).
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией MIT.
+
